@@ -31,11 +31,11 @@ if __name__ == '__main__':
     cookies = os.environ.get("COOKIES", []).split("&")
     if cookies[0] != "":
      
-       check_in_url = "https://glados.rocks/api/user/checkin"
-       status_url = "https://glados.rocks/api/user/status"
+       check_in_url = "https://glados.cloud/api/user/checkin"
+       status_url = "https://glados.cloud/api/user/status"
 
-        referer = 'https://glados.rocks/console/checkin'
-        origin = "https://glados.rocks"
+        referer = 'https://glados.cloud/console/checkin'
+        origin = "https://glados.cloud"
         useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
         payload = {
             'token': 'glados.one'
@@ -108,6 +108,7 @@ if __name__ == '__main__':
         send_wechat(sckey, title, context)
         # pushdeer = PushDeer(pushkey=sckey) 
         # pushdeer.send_text(title, desp=context)
+
 
 
 
