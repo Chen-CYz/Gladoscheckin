@@ -34,7 +34,7 @@ if __name__ == '__main__':
         check_in_url = "https://glados.cloud/console/checkin"        # 签到地址
         status_url = "https://glados.space/api/user/status"          # 查看账户状态
 
-        referer = 'https://glados.space/console/checkin'
+        referer = 'https://glados.cloud/console/checkin'
         origin = "https://glados.space"
         useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
         payload = {
@@ -108,4 +108,5 @@ if __name__ == '__main__':
         send_wechat(sckey, title, context)
         # pushdeer = PushDeer(pushkey=sckey) 
         # pushdeer.send_text(title, desp=context)
+
 
