@@ -60,16 +60,15 @@ if __name__ == '__main__':
                 points = result.get('points')
 
                 # 获取账号当前状态
-                result = state.json()
+                                result = state.json()
                 if not isinstance(result.get("data"), dict):
-                 print("账号状态查询失败，HTTP:", state.status_code)
-                 print("接口错误码:", result.get("code"))
-                 print("接口提示:", result.get("message"))
-               raise SystemExit(1)
-                # 获取剩余时间
-                leftdays = int(float(result['data']['leftDays']))
-                # 获取账号email
-                email = result['data']['email']
+                    print("账号状态查询失败，HTTP:", state.status_code)
+                    print("接口错误码:", result.get("code"))
+                    print("接口提示:", result.get("message"))
+                    raise SystemExit(1)
+
+                leftdays = int(float(result["data"]["leftDays"]))
+                email = result["data"]["email"]
                 
                 print(check_result)
                 if "Checkin! Got" in check_result:
