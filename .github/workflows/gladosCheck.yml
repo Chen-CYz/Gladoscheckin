@@ -17,8 +17,8 @@ jobs:
     name: glados checkin
     runs-on: ubuntu-24.04
     strategy:
-    matrix:
-    python-version: ['3.12']
+      matrix:
+       python-version: ['3.12']
 
     steps:
     - uses: actions/checkout@v4
