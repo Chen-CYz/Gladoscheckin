@@ -60,7 +60,7 @@ if __name__ == '__main__':
                 points = result.get('points')
 
                 # 获取账号当前状态
-                                result = state.json()
+                result = state.json()
                 if not isinstance(result.get("data"), dict):
                     print("账号状态查询失败，HTTP:", state.status_code)
                     print("接口错误码:", result.get("code"))
